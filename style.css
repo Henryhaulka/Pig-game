@@ -30,7 +30,7 @@ html {
   
 }
 
-.player1 {
+.player0 {
   padding-top: 3rem;
 }
 
@@ -38,14 +38,14 @@ html {
   background-color: #C4FCEF;
 }
 
-.player2 {
+.player1 {
   /* background-color: #FEF7FF; */
   padding-top: 3rem;
 }
 
 
-.player1 > h2,
-.player2 > h2{
+.player0 > h2,
+.player1 > h2{
    padding-top: 5rem;
    font-weight: lighter;
    letter-spacing: 1px;
@@ -54,8 +54,8 @@ html {
 }
 
 
-.player1 > div,
-.player2 > div {
+.player0 > div,
+.player1 > div {
     background-color: orangered;
     width: 30%;
     margin: auto;
@@ -70,8 +70,8 @@ html {
     font-size: 3rem;
 }
 
-.player1 > p,
-.player2 > p {
+.player0 > p,
+.player1 > p {
    padding-top: 2rem;
    font-weight: 100;
    font-size: 12rem;
@@ -96,6 +96,12 @@ html {
   padding: 0.8rem;
   outline: none;
   transition: all 0.2s;
+}
+
+.winner {
+  background-color: green;
+  color: whitesmoke;
+  padding-top: 2rem;
 }
 
 .btn-animated {
@@ -137,7 +143,7 @@ html {
   top: 83%;
 }
 
-.player1,
-.player2 {
+.player0,
+.player1 {
   width: 50%;
 }

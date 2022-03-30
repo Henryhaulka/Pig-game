@@ -1,7 +1,5 @@
 var scores, activePlayer, roundScore;
-scores = [0,0];
-activePlayer = 0;
-roundScore = 0;
+init();
 //Math.random returns a number less than 1
 //Math.floor rounds a float down
 // without +1, we return a number 0 and less than 6
@@ -14,13 +12,7 @@ roundScore = 0;
 // document.querySelector("#score-" + activePlayer).innerHTML = "<i>" + dice + "</i>";
 // document.querySelector("#score-" + activePlayer).textContent = dice;
 
-document.querySelector(".dice").style.display = 'none';
 
-//getElementbyid() is faster and used for only id only
-document.getElementById('total-0').textContent = 0;
-document.getElementById('total-1').textContent = 0;
-document.getElementById('score-0').textContent = 0;
-document.getElementById("score-0").textContent = 0;
 
 //read doc for callback and anonymous functions
 //read doc for event listeners
@@ -47,7 +39,17 @@ document.querySelector(".btn-roll").addEventListener('click', function () {
 document.querySelector(".btn-hold").addEventListener('click', function () {
     scores[activePlayer] += roundScore
     document.querySelector("#total-" + activePlayer).textContent = scores[activePlayer];
-    NextPlayer();
+    if ((scores[activePlayer]) >= 10) {
+        document.querySelector(".name-" + activePlayer).textContent =
+            "WINNER!!! 🏆";
+        document.querySelector(".player" + activePlayer).classList.remove('active');
+         document.querySelector(".player" + activePlayer).classList.add("winner");
+        document.querySelector(".dice").style.display = 'none';
+        document.querySelector("#total-" + activePlayer).style.color ='white';
+    } else {
+        NextPlayer();
+    }
+    
 });
 
 function NextPlayer() {
@@ -55,8 +57,29 @@ function NextPlayer() {
   roundScore = 0;
   document.getElementById("score-0").textContent = 0;
   document.getElementById("score-1").textContent = 0;
+  document.querySelector(".player0").classList.toggle("active");
   document.querySelector(".player1").classList.toggle("active");
-  document.querySelector(".player2").classList.toggle("active");
   // document.querySelector(".player1").classList.remove("active");
   // document.querySelector(".player2").classList.add("active");
 }
+
+function init() {
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+    document.querySelector(".dice").style.display = "none";
+
+    //getElementbyid() is faster and used for only id only
+    document.getElementById("total-0").textContent = 0;
+    document.getElementById("total-1").textContent = 0;
+    document.getElementById("score-0").textContent = 0;
+    document.getElementById("score-0").textContent = 0;
+    document.querySelector(".name-0").textContent = "PLAYER 1";
+    document.querySelector(".name-1").textContent = "PLAYER 2";
+    document.querySelector(".player0" ).classList.add("active");
+    document.querySelector(".player0").classList.remove("winner");
+    document.querySelector("#total-" + activePlayer).style.color = "orangered";
+    
+}
+
+document.querySelector(".btn--new").addEventListener('click', init);
