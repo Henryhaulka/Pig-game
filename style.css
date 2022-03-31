@@ -151,6 +151,14 @@ html {
   top: 70%;
 }
 
+#dice1 {
+  left: 55%
+}
+
+#dice2 {
+  left: 45%
+}
+
 .dice {
   top: 50%;
   height: 7rem;
