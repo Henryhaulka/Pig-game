@@ -101,7 +101,8 @@ function init() {
   document.querySelector(".player0").classList.remove("winner");
   //when player 2 wins
   document.querySelector(".player1").classList.remove("winner");
-  document.querySelector("#total-" + activePlayer).style.color = "orangered";
+  document.querySelector("#total-0").style.color = "orangered";
+  document.querySelector("#total-1").style.color = "orangered";
 }
 
 document.querySelector(".btn--new").addEventListener("click", init);
