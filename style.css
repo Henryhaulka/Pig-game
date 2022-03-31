@@ -81,7 +81,8 @@ html {
 }
 
 .btn,
-.dice {
+.dice,
+.final-score {
   position: absolute;
   left: 50%;
   transform: 
@@ -96,6 +97,22 @@ html {
   padding: 0.8rem;
   outline: none;
   transition: all 0.2s;
+}
+
+.final-score {
+  top: 95%;
+  width: 10rem;
+  font-size: 1rem;
+  border-radius: 0;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #008F7A;
+  color: white;
+}
+
+.final-score::placeholder {
+  color: white;
 }
 
 .winner {
@@ -140,7 +157,7 @@ html {
 }
 
 .btn-hold {
-  top: 83%;
+  top: 81%;
 }
 
 .player0,
