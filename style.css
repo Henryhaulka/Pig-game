@@ -147,3 +147,12 @@ html {
 .player1 {
   width: 50%;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 22.5%;
+  }
+  .winner {
+    font-size: 1px;
+  }
+}
