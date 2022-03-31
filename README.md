@@ -3,10 +3,11 @@ In this Project, I built a game with the concept of DOM manipulation for my lear
 
 # RULES
 - The game has two players playing in rounds
-- In each turn, a player rolls a dice as much as he wishes which is added to the player's current score by clicking 'ROLL DICE'.
+- In each turn, a player rolls two dices as much as he wishes which is added to the player's current score by clicking 'ROLL DICE'.
 - if a player rolls a 1, the losses his current score, after that, it's the next player turn
+- if a player rolls a double 1, the player losses his current score and his total score (GLOBAL)
 - when a player clickes on HOLD,the player gets his total score (GLOBAL) and it's the next player's turn
-- The first player to reach a 50 point wins
+- The first player to reach a 100 point wins
 
 ![screenshot](/img/pig-game.png)
 
