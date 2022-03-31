@@ -43,7 +43,7 @@ document.querySelector(".btn-hold").addEventListener('click', function () {
       scores[activePlayer] += roundScore;
       document.querySelector("#total-" + activePlayer).textContent =
         scores[activePlayer];
-      if (scores[activePlayer] >= 10) {
+      if (scores[activePlayer] >= 100) {
         document.querySelector(".name-" + activePlayer).textContent =
           "WINNER!!! 🏆";
         document.querySelector(".player" + activePlayer).classList.remove("active");
