@@ -12,7 +12,22 @@
     ></script>
 </head>
 <body>
-    <div class ='container'>
+    <p class="rules"><a href="#pop" >RULE & HOW TO PLAY</a></p>
+    <div class="pop" id="pop">
+        <div class="pop-content">
+             <a href="#contain" class="pop-close">&times;</a>
+            <p>- The game has two players playing in rounds</p>
+            <p>- In each turn, a player rolls two dices once which is added to the player's current score by clicking 'ROLL DICE'</p>.
+            <p>- When player rolls the dice and he didn't roll a 1, player clickes on 'HOLD' to add to his total score and it's the next player's turn</p>
+            <p>- if a player rolls a 1, the player losses his current score, then it's the next player turn</p>
+            <p>- if a player rolls a double 1, the player losses his current score and his total score (GLOBAL)</p>
+            <!-- <p>- when a player clickes on HOLD,the player gets his total score (GLOBAL) and it's the next player's turn</p> -->
+            <p>- The first player to reach a 100 point wins by default</p>
+            <p>- Players can reset the FINAL SCORE to be the default winning score</p>
+        </div>
+
+    </div>
+    <div class ='container' id="contain">
        <section class="player0 active">
                <h2 class="name-0">PLAYER 1</h2>
                <p id = 'total-0'> 4</p>

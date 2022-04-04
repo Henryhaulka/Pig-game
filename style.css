@@ -27,6 +27,7 @@ html {
    translate(-50%, -50%);
   display: flex;
   text-align: center;
+  z-index: 5;
   
 }
 
@@ -157,6 +158,76 @@ html {
 
 #dice2 {
   left: 45%
+}
+
+.pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+   /* opacity: 1;
+  visibility: visible; */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.pop:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rules {
+  text-align: center;
+  font-size: 2rem;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: orangered;
+  width: 20%;
+  padding: 1rem;
+  border-radius: 1rem;
+  
+}
+
+.rules a {
+  text-decoration: none;
+  color: white;
+ 
+}
+
+.pop-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* -webkit-transform: translate(-50%, -50%); */
+          transform: translate(-50%, -50%);
+  background-color: white;
+  color: green;
+  padding: 2rem;
+  font-size: 2rem;
+  width: 80%;
+}
+
+.pop-close:link, .pop-close:visited {
+  font-size: 4rem;
+  text-decoration: none;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.pop-close:hover {
+  color: yellow;
+}
+
+.pop p {
+  padding: 1rem;
 }
 
 .dice {
