@@ -251,4 +251,8 @@ html {
   .winner {
     font-size: 1px;
   }
+  .rules {
+  top: 30%;
+  width: 40%;  
+}
 }
