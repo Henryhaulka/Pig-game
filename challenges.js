@@ -12,7 +12,7 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
     document.getElementById("dice1").style.display = "block";
     document.getElementById("dice2").style.display = "block";
     document.getElementById("dice1").src = "img/" + "dice-" + dice_1 + ".png";
-      document.getElementById("dice2").src = "img/" + "dice-" + dice_2 + ".png";
+    document.getElementById("dice2").src = "img/" + "dice-" + dice_2 + ".png";
       //if a player rolls two 1's
       if (dice_1 == 1 && dice_2 == 1) {
           scores[activePlayer] = 0;
@@ -98,8 +98,9 @@ function init() {
   document.querySelector(".name-0").textContent = "PLAYER 1";
   document.querySelector(".name-1").textContent = "PLAYER 2";
   document.querySelector(".player0").classList.add("active");
+  //if player 1 won the last session
   document.querySelector(".player0").classList.remove("winner");
-  //when player 2 wins
+  //when player 2 won the last session
   document.querySelector(".player1").classList.remove("winner");
   document.querySelector("#total-0").style.color = "orangered";
   document.querySelector("#total-1").style.color = "orangered";
